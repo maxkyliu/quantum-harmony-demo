@@ -10,10 +10,14 @@ from [moth-quantum-skills](https://github.com/maxkyliu/moth-quantum-skills).
 | File | Chords |
 | --- | --- |
 | `original.mp3` | YuE2's own plan |
-| `quantum-0.3.mp3` | 7 of 21 chords changed |
-| `quantum-0.5.mp3` | 13 of 21 chords changed |
+| `quantum-0.3.mp3` | 5 of 21 chords changed |
+| `quantum-0.5.mp3` | 12 of 21 chords changed |
 
 The MP3s are loudness-matched to about −15 LUFS.
+
+2026-10-15: the two quantum versions were re-rendered with the fixed chord naming
+(original chord kept unless clearly beaten, no invented slash basses). Same blur results,
+same seed; the first versions are in this repo's git history.
 
 ## Credits
 
