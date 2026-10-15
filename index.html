@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quantum Harmony Demo</title>
+<meta name="description" content="One song, three harmonies: YuE2 renders of City Lights with chords reshaped by a quantum blur on Moth Quantum.">
+<style>
+:root { --bg:#fbfaf8; --surface:#ffffff; --fg:#1d1c1a; --muted:#6b6862; --line:#e6e2dc; --accent:#3d5afe; --diff:#fff1cc; --diff-fg:#5a4300; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg:#141416; --surface:#1c1c20; --fg:#ecebe8; --muted:#a19e98; --line:#2e2e33; --accent:#8c9eff; --diff:#3b3220; --diff-fg:#f3d88a; }
+}
+:root[data-theme="dark"] { --bg:#141416; --surface:#1c1c20; --fg:#ecebe8; --muted:#a19e98; --line:#2e2e33; --accent:#8c9eff; --diff:#3b3220; --diff-fg:#f3d88a; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width:780px; margin:0 auto; padding:48px 16px 64px; }
+h1 { font-size:clamp(28px, 6vw, 40px); line-height:1.15; margin:0 0 12px; letter-spacing:-0.01em; }
+h2 { font-size:20px; margin:44px 0 10px; }
+p { margin:0 0 14px; } .lead { font-size:19px; color:var(--fg); }
+.muted, .meta { color:var(--muted); } .meta { font-size:14px; font-weight:400; margin-left:6px; }
+a { color:var(--accent); }
+.player { margin:0 0 14px; padding:14px 16px; background:var(--surface); border:1px solid var(--line); border-radius:10px; }
+.player figcaption { font-weight:600; margin-bottom:8px; }
+audio { width:100%; display:block; }
+ol { padding-left:22px; } li { margin-bottom:6px; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+table { border-collapse:collapse; width:100%; font-variant-numeric:tabular-nums; font-size:15px; }
+th, td { padding:8px 12px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap; }
+th { font-size:13px; text-transform:uppercase; letter-spacing:0.04em; color:var(--muted); font-weight:600; }
+tbody tr:last-child td { border-bottom:0; }
+tr[data-t] { cursor:pointer; } tr[data-t]:hover, tr[data-t]:focus { outline:none; background:color-mix(in srgb, var(--accent) 8%, transparent); }
+td.diff { background:var(--diff); color:var(--diff-fg); font-weight:600; } td.same { color:var(--muted); }
+details { margin-top:12px; } pre { white-space:pre-wrap; font:15px/1.6 inherit; margin:10px 0 0; color:var(--muted); }
+footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--line); font-size:14px; color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+<h1>One song, three harmonies</h1>
+<p class="lead">The same melody, lyrics, style and random seed, rendered three times by the YuE2 music model.
+Only the chords differ: in two versions they were reshaped by a <em>quantum blur</em> run on Moth Quantum.</p>
+<p class="muted">The three tracks are loudness-matched. The melody and lyrics are identical in all three scores;
+YuE2 treats the chords as guidance, so the audio follows them closely but not note for note.</p>
+
+<figure class='player'><figcaption>YuE2&#x27;s own chords</figcaption><audio controls preload='metadata' src='original.mp3'></audio></figure><figure class='player'><figcaption>Quantum blur, strength 0.3 <span class=meta>7 of 21 chords changed</span></figcaption><audio controls preload='metadata' src='quantum-0.3.mp3'></audio></figure><figure class='player'><figcaption>Quantum blur, strength 0.5 <span class=meta>13 of 21 chords changed</span></figcaption><audio controls preload='metadata' src='quantum-0.5.mp3'></audio></figure>
+
+<h2>What changed</h2>
+<p>Every chord that differs from YuE2's own plan. Click a row to jump all three players to that moment.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Time</th><th>Bar</th><th>Original</th><th>0.3</th><th>0.5</th></tr></thead>
+<tbody><tr data-t='2.53' tabindex='0'><td>0:02.5</td><td>2</td><td>C</td><td class='diff'>Csus4</td><td class='diff'>Csus4</td></tr><tr data-t='2.89' tabindex='0'><td>0:02.9</td><td>2</td><td>C</td><td class='same'>C</td><td class='diff'>Cmaj7/B</td></tr><tr data-t='8.67' tabindex='0'><td>0:08.7</td><td>4</td><td>Fmaj7</td><td class='diff'>Am/E</td><td class='diff'>Em</td></tr><tr data-t='11.57' tabindex='0'><td>0:11.6</td><td>5</td><td>Fmaj7</td><td class='diff'>F</td><td class='same'>Fmaj7</td></tr><tr data-t='23.13' tabindex='0'><td>0:23.1</td><td>9</td><td>F</td><td class='same'>F</td><td class='diff'>Fmaj7/E</td></tr><tr data-t='26.02' tabindex='0'><td>0:26.0</td><td>10</td><td>C</td><td class='diff'>Csus4</td><td class='same'>C</td></tr><tr data-t='31.81' tabindex='0'><td>0:31.8</td><td>12</td><td>Am</td><td class='same'>Am</td><td class='diff'>Fmaj7</td></tr><tr data-t='34.70' tabindex='0'><td>0:34.7</td><td>13</td><td>F</td><td class='diff'>Fmaj7</td><td class='diff'>Fmaj7/E</td></tr><tr data-t='37.59' tabindex='0'><td>0:37.6</td><td>14</td><td>C</td><td class='same'>C</td><td class='diff'>Csus4</td></tr><tr data-t='43.37' tabindex='0'><td>0:43.4</td><td>16</td><td>Am</td><td class='same'>Am</td><td class='diff'>Fmaj7</td></tr><tr data-t='46.27' tabindex='0'><td>0:46.3</td><td>17</td><td>F</td><td class='diff'>Fmaj7</td><td class='diff'>Fmaj7/E</td></tr><tr data-t='49.16' tabindex='0'><td>0:49.2</td><td>18</td><td>C</td><td class='same'>C</td><td class='diff'>Csus4</td></tr><tr data-t='52.05' tabindex='0'><td>0:52.0</td><td>19</td><td>G</td><td class='same'>G</td><td class='diff'>Em</td></tr><tr data-t='54.94' tabindex='0'><td>0:54.9</td><td>20</td><td>F</td><td class='same'>F</td><td class='diff'>Fmaj7/E</td></tr><tr data-t='57.83' tabindex='0'><td>0:57.8</td><td>21</td><td>C</td><td class='diff'>Csus4</td><td class='diff'>Cmaj7</td></tr></tbody>
+</table></div>
+
+<h2>How it works</h2>
+<ol>
+<li><strong>Plan.</strong> YuE2 writes the song as an editable lead sheet: a melody line plus one chord symbol per bar.</li>
+<li><strong>Blur.</strong> The chords become a block-chord MIDI track. Moth Quantum's <code>blur-midi-v1</code> engine encodes
+the piano roll into qubits and rotates them, so each chord's notes bleed into neighbouring pitches and beats.</li>
+<li><strong>Read back.</strong> For every original chord span, the blurred notes are matched to the closest chord YuE2
+understands, kept within the song's key; the original chord stays unless another fits clearly better.</li>
+<li><strong>Render.</strong> Only the chord symbols change in the score (the melody is verified byte-for-byte), and YuE2
+renders the new score with the original lyrics and seed.</li>
+</ol>
+<p>At strength 0.3 the blur mostly recolours chords (C → Csus4, F → Fmaj7). At 0.5 it also swaps in related
+chords (Am → Fmaj7, G → Em). The code is the <code>yue2_harmony.py</code> tool in
+<a href="https://github.com/maxkyliu/moth-quantum-skills">moth-quantum-skills</a>.</p>
+
+<details><summary>Lyrics and style prompt</summary>
+<pre>English, warm piano pop, expressive female voice, acoustic piano, rounded bass and light drums, lyrical memorable melody, unhurried phrasing, 88 BPM
+
+[Verse]
+Neon fades along the lane
+Footsteps keep the time of rain
+Fold the night and leave it here
+Morning has a sky to clear
+
+[Chorus]
+Let the day come into view
+Every road begins with you
+Hold a little room for light
+We will sing beyond the night</pre></details>
+
+<footer>
+<p>Music generated with <a href="https://github.com/multimodal-art-projection/YuE">YuE2</a> (m-a-p/YuE2-3B, seed 831001).
+Lyrics and style are YuE2's “City Lights” example (Apache-2.0, © the YuE2 authors).
+Quantum blur by <a href="https://docs.mothquantum.com">Moth Quantum</a> <code>blur-midi-v1</code>.
+Page and tooling: <a href="https://github.com/maxkyliu/moth-quantum-skills">moth-quantum-skills</a> (MIT).</p>
+</footer>
+</main>
+<script>
+document.querySelectorAll('tr[data-t]').forEach(r => {
+  const seek = () => document.querySelectorAll('audio').forEach(a => { a.currentTime = parseFloat(r.dataset.t); });
+  r.addEventListener('click', seek);
+  r.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); seek(); } });
+});
+</script>
+</body>
+</html>
