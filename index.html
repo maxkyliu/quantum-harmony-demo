@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Quantum Harmony Demo</title>
-<meta name="description" content="One song, three harmonies: YuE2 renders of City Lights with chords reshaped by a quantum blur on Moth Quantum.">
+<meta name="description" content="One song, four harmonies: YuE2 renders of City Lights with chords reshaped by a quantum blur on Moth Quantum and by the gaps between Riemann zeta zeros.">
 <style>
 :root { --bg:#fbfaf8; --surface:#ffffff; --fg:#1d1c1a; --muted:#6b6862; --line:#e6e2dc; --accent:#3d5afe; --diff:#fff1cc; --diff-fg:#5a4300; }
 @media (prefers-color-scheme: dark) {
@@ -36,19 +36,20 @@ footer { margin-top:48px; padding-top:16px; border-top:1px solid var(--line); fo
 </head>
 <body>
 <main>
-<h1>One song, three harmonies</h1>
-<p class="lead">The same melody, lyrics, style and random seed, rendered three times by the YuE2 music model.
-Only the chords differ: in two versions they were reshaped by a <em>quantum blur</em> run on Moth Quantum.</p>
-<p class="muted">The three tracks are loudness-matched. The melody and lyrics are identical in all three scores;
+<h1>One song, four harmonies</h1>
+<p class="lead">The same melody, lyrics, style and random seed, rendered four times by the YuE2 music model.
+Only the chords differ: in two versions they were reshaped by a <em>quantum blur</em> run on Moth Quantum,
+and in one by the spacing of the <em>Riemann zeta zeros</em>.</p>
+<p class="muted">The four tracks are loudness-matched. The melody and lyrics are identical in all three scores;
 YuE2 treats the chords as guidance, so the audio follows them closely but not note for note.</p>
 
-<figure class='player'><figcaption>YuE2&#x27;s own chords</figcaption><audio controls preload='metadata' src='original.mp3'></audio></figure><figure class='player'><figcaption>Quantum blur, strength 0.3 <span class=meta>5 of 21 chords changed</span></figcaption><audio controls preload='metadata' src='quantum-0.3.mp3'></audio></figure><figure class='player'><figcaption>Quantum blur, strength 0.5 <span class=meta>12 of 21 chords changed</span></figcaption><audio controls preload='metadata' src='quantum-0.5.mp3'></audio></figure>
+<figure class='player'><figcaption>YuE2&#x27;s own chords</figcaption><audio controls preload='metadata' src='original.mp3'></audio></figure><figure class='player'><figcaption>Quantum blur, strength 0.3 <span class=meta>5 of 21 chords changed</span></figcaption><audio controls preload='metadata' src='quantum-0.3.mp3'></audio></figure><figure class='player'><figcaption>Quantum blur, strength 0.5 <span class=meta>12 of 21 chords changed</span></figcaption><audio controls preload='metadata' src='quantum-0.5.mp3'></audio></figure><figure class='player'><figcaption>Riemann zeta zero gaps <span class=meta>4 of 21 chords changed</span></figcaption><audio controls preload='metadata' src='zeta.mp3'></audio></figure>
 
 <h2>What changed</h2>
-<p>Every chord that differs from YuE2's own plan. Click a row to jump all three players to that moment.</p>
+<p>Every chord that differs from YuE2's own plan. Click a row to jump all four players to that moment.</p>
 <div class="table-wrap"><table>
-<thead><tr><th>Time</th><th>Bar</th><th>Original</th><th>0.3</th><th>0.5</th></tr></thead>
-<tbody><tr data-t='2.89' tabindex='0'><td>0:02.9</td><td>2</td><td>C</td><td class='same'>C</td><td class='diff'>Cmaj7</td></tr><tr data-t='8.67' tabindex='0'><td>0:08.7</td><td>4</td><td>Fmaj7</td><td class='same'>Fmaj7</td><td class='diff'>Em</td></tr><tr data-t='11.57' tabindex='0'><td>0:11.6</td><td>5</td><td>Fmaj7</td><td class='diff'>F</td><td class='same'>Fmaj7</td></tr><tr data-t='23.13' tabindex='0'><td>0:23.1</td><td>9</td><td>F</td><td class='same'>F</td><td class='diff'>Fmaj7</td></tr><tr data-t='26.02' tabindex='0'><td>0:26.0</td><td>10</td><td>C</td><td class='diff'>Csus4</td><td class='same'>C</td></tr><tr data-t='31.81' tabindex='0'><td>0:31.8</td><td>12</td><td>Am</td><td class='same'>Am</td><td class='diff'>Fmaj7</td></tr><tr data-t='34.70' tabindex='0'><td>0:34.7</td><td>13</td><td>F</td><td class='diff'>Fmaj7</td><td class='diff'>Fmaj7</td></tr><tr data-t='37.59' tabindex='0'><td>0:37.6</td><td>14</td><td>C</td><td class='same'>C</td><td class='diff'>Csus4</td></tr><tr data-t='43.37' tabindex='0'><td>0:43.4</td><td>16</td><td>Am</td><td class='same'>Am</td><td class='diff'>Fmaj7</td></tr><tr data-t='46.27' tabindex='0'><td>0:46.3</td><td>17</td><td>F</td><td class='diff'>Fmaj7</td><td class='diff'>Fmaj7</td></tr><tr data-t='49.16' tabindex='0'><td>0:49.2</td><td>18</td><td>C</td><td class='same'>C</td><td class='diff'>Csus4</td></tr><tr data-t='52.05' tabindex='0'><td>0:52.0</td><td>19</td><td>G</td><td class='same'>G</td><td class='diff'>Em</td></tr><tr data-t='54.94' tabindex='0'><td>0:54.9</td><td>20</td><td>F</td><td class='same'>F</td><td class='diff'>Fmaj7</td></tr><tr data-t='57.83' tabindex='0'><td>0:57.8</td><td>21</td><td>C</td><td class='diff'>Csus4</td><td class='diff'>Cmaj7</td></tr></tbody>
+<thead><tr><th>Time</th><th>Bar</th><th>Original</th><th>0.3</th><th>0.5</th><th>Zeta</th></tr></thead>
+<tbody><tr data-t='2.89' tabindex='0'><td>0:02.9</td><td>2</td><td>C</td><td class='same'>C</td><td class='diff'>Cmaj7</td><td class='same'>C</td></tr><tr data-t='8.67' tabindex='0'><td>0:08.7</td><td>4</td><td>Fmaj7</td><td class='same'>Fmaj7</td><td class='diff'>Em</td><td class='same'>Fmaj7</td></tr><tr data-t='11.57' tabindex='0'><td>0:11.6</td><td>5</td><td>Fmaj7</td><td class='diff'>F</td><td class='same'>Fmaj7</td><td class='diff'>F</td></tr><tr data-t='23.13' tabindex='0'><td>0:23.1</td><td>9</td><td>F</td><td class='same'>F</td><td class='diff'>Fmaj7</td><td class='diff'>Dm</td></tr><tr data-t='26.02' tabindex='0'><td>0:26.0</td><td>10</td><td>C</td><td class='diff'>Csus4</td><td class='same'>C</td><td class='same'>C</td></tr><tr data-t='31.81' tabindex='0'><td>0:31.8</td><td>12</td><td>Am</td><td class='same'>Am</td><td class='diff'>Fmaj7</td><td class='same'>Am</td></tr><tr data-t='34.70' tabindex='0'><td>0:34.7</td><td>13</td><td>F</td><td class='diff'>Fmaj7</td><td class='diff'>Fmaj7</td><td class='same'>F</td></tr><tr data-t='37.59' tabindex='0'><td>0:37.6</td><td>14</td><td>C</td><td class='same'>C</td><td class='diff'>Csus4</td><td class='same'>C</td></tr><tr data-t='43.37' tabindex='0'><td>0:43.4</td><td>16</td><td>Am</td><td class='same'>Am</td><td class='diff'>Fmaj7</td><td class='diff'>Asus4</td></tr><tr data-t='46.27' tabindex='0'><td>0:46.3</td><td>17</td><td>F</td><td class='diff'>Fmaj7</td><td class='diff'>Fmaj7</td><td class='diff'>F6</td></tr><tr data-t='49.16' tabindex='0'><td>0:49.2</td><td>18</td><td>C</td><td class='same'>C</td><td class='diff'>Csus4</td><td class='same'>C</td></tr><tr data-t='52.05' tabindex='0'><td>0:52.0</td><td>19</td><td>G</td><td class='same'>G</td><td class='diff'>Em</td><td class='same'>G</td></tr><tr data-t='54.94' tabindex='0'><td>0:54.9</td><td>20</td><td>F</td><td class='same'>F</td><td class='diff'>Fmaj7</td><td class='same'>F</td></tr><tr data-t='57.83' tabindex='0'><td>0:57.8</td><td>21</td><td>C</td><td class='diff'>Csus4</td><td class='diff'>Cmaj7</td><td class='same'>C</td></tr></tbody>
 </table></div>
 
 <h2>How it works</h2>
@@ -64,6 +65,21 @@ renders the new score with the original lyrics and seed.</li>
 <p>At strength 0.3 the blur mostly recolours chords (C → Csus4, F → Fmaj7). At 0.5 it also swaps in related
 chords (Am → Fmaj7, G → Em). The code is the <code>yue2_harmony.py</code> tool in
 <a href="https://github.com/maxkyliu/moth-quantum-skills">moth-quantum-skills</a>.</p>
+
+<h2>The Riemann zeta version</h2>
+<p>Riemann's explicit formula writes the count of prime numbers as a smooth curve plus one wave for each zero of
+the zeta function, which is why the zeros are called the “music of the primes”. As pitches they do not form a
+scale, so this version does not retune the song. It borrows their <em>spacing</em>: neighbouring zeros repel each
+other like the energy levels of a chaotic quantum system, giving a sequence that is irregular but always the same.</p>
+<ol>
+<li><strong>Profiles.</strong> Each chord becomes 12 note strengths: root 1.0, other chord tones 0.5, the rest 0.</li>
+<li><strong>Zeta nudge.</strong> The gaps between the first 253 zeros, scaled to average 1, nudge each strength up or
+down: strength + 0.5 × (gap − 1).</li>
+<li><strong>Change dial.</strong> The chords the nudged notes fit better than the original become candidates; up to a
+quarter of the chords change, same-root recolourings first. Here 4 of 21: Fmaj7 → F, F → F6, F → Dm, Am → Asus4.</li>
+</ol>
+<p>No quantum hardware and no randomness: the zeros are computed with mpmath, so the same song always gets the
+same rewrite. The code is <code>yue2_zeta.py</code> in <a href="https://github.com/maxkyliu/moth-quantum-skills">moth-quantum-skills</a>.</p>
 
 <details><summary>Lyrics and style prompt</summary>
 <pre>English, warm piano pop, expressive female voice, acoustic piano, rounded bass and light drums, lyrical memorable melody, unhurried phrasing, 88 BPM
@@ -84,6 +100,7 @@ We will sing beyond the night</pre></details>
 <p>Music generated with <a href="https://github.com/multimodal-art-projection/YuE">YuE2</a> (m-a-p/YuE2-3B, seed 831001).
 Lyrics and style are YuE2's “City Lights” example (Apache-2.0, © the YuE2 authors).
 Quantum blur by <a href="https://docs.mothquantum.com">Moth Quantum</a> <code>blur-midi-v1</code>.
+Zeta zeros computed with <a href="https://mpmath.org">mpmath</a>.
 Page and tooling: <a href="https://github.com/maxkyliu/moth-quantum-skills">moth-quantum-skills</a> (MIT).</p>
 </footer>
 </main>
